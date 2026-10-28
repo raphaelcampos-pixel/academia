@@ -19,8 +19,8 @@ public class DefaultEntity {
     private LocalDateTime dataCriacao;
     private LocalDateTime dataAtualizacao;
 
-    // @Version 
-    // private long version;
+    @Version 
+    private long version;
 
     @PrePersist 
     public void gerarDataCriacao() {
@@ -73,5 +73,12 @@ public class DefaultEntity {
         return dataCriacao;
     }
     
+    public long getVersion(){
+        return version;
+    }
+
+    public void setVersion(long version){
+        this.version = version;
+    }
  
 }

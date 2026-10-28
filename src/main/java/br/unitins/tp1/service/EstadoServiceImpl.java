@@ -1,5 +1,6 @@
 package br.unitins.tp1.service;
 
+import java.lang.Runtime.Version;
 import java.util.List;
 
 import br.unitins.tp1.exception.BusinessValidationException;
@@ -33,8 +34,10 @@ public class EstadoServiceImpl implements EstadoService {
         if (novoEstado == null) {
             throw new NotFoundException("Estado nao encontrado.");
         }
+        
         validarSiglaDuplicada(estado.getSigla(), id);
         novoEstado.setNome(estado.getNome());
+        novoEstado.setVersion(estado.getVersion());
         novoEstado.setSigla(estado.getSigla());
         novoEstado.setRegiao(estado.getRegiao());
     }

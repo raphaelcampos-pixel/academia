@@ -1,36 +1,29 @@
--- This file allow to write SQL commands that will be emitted in test and dev.
--- The commands are commented as their support depends of the database
--- insert into myentity (id, field) values(1, 'field-1');
--- insert into myentity (id, field) values(2, 'field-2');
--- insert into myentity (id, field) values(3, 'field-3');
--- alter sequence myentity_seq restart with 4;
+insert into estado (nome, sigla, idregiao, version) values('Tocantins', 'TO', 3);
+insert into estado (nome, sigla, idregiao, version) values('Goias', 'GO', 1);
+insert into estado (nome, sigla, idregiao, version) values('Rio de Janeiro', 'RJ', 4);
+insert into estado (nome, sigla, version) values('Sao Paulo', 'SP');
 
-insert into estado (nome, sigla, idregiao) values('Tocantins', 'TO', 3);
-insert into estado (nome, sigla, idregiao) values('Goias', 'GO', 1);
-insert into estado (nome, sigla, idregiao) values('Rio de Janeiro', 'RJ', 4);
-insert into estado (nome, sigla) values('Sao Paulo', 'SP');
+insert into municipio (nome, id_estado, version) values ('Palmas', 1);
+insert into municipio (nome, id_estado, version) values ('Araguaina', 1);
+insert into municipio (nome, id_estado, version) values ('Gurupi', 1);
+insert into municipio (nome, id_estado, version) values ('Porto Nacional', 1);
+insert into municipio (nome, id_estado, version) values ('Goiania', 2);
+insert into municipio (nome, id_estado, version) values ('Anapolis', 2);
+insert into municipio (nome, id_estado, version) values ('Rio Verde', 2);
+insert into municipio (nome, id_estado, version) values ('Niteroi', 3);
+insert into municipio (nome, id_estado, version) values ('Petropolis', 3);
+insert into municipio (nome, id_estado, version) values ('Cabo Frio', 3);
 
-insert into municipio (nome, id_estado) values ('Palmas', 1);
-insert into municipio (nome, id_estado) values ('Araguaina', 1);
-insert into municipio (nome, id_estado) values ('Gurupi', 1);
-insert into municipio (nome, id_estado) values ('Porto Nacional', 1);
-insert into municipio (nome, id_estado) values ('Goiania', 2);
-insert into municipio (nome, id_estado) values ('Anapolis', 2);
-insert into municipio (nome, id_estado) values ('Rio Verde', 2);
-insert into municipio (nome, id_estado) values ('Niteroi', 3);
-insert into municipio (nome, id_estado) values ('Petropolis', 3);
-insert into municipio (nome, id_estado) values ('Cabo Frio', 3);
-
-insert into pessoa (nome, cpf, email) values ('Ana Clara Souza', '12345678901', 'ana.clara@email.com');
-insert into pessoa (nome, cpf, email) values ('Bruno Martins Lima', '12345678902', 'bruno.martins@email.com');
-insert into pessoa (nome, cpf, email) values ('Carla Fernanda Alves', '12345678903', 'carla.alves@email.com');
-insert into pessoa (nome, cpf, email) values ('Diego Pereira Rocha', '12345678904', 'diego.rocha@email.com');
-insert into pessoa (nome, cpf, email) values ('Elisa Gomes Santos', '12345678905', 'elisa.santos@email.com');
-insert into pessoa (nome, cpf, email) values ('Fabiana Costa Melo', '98765432101', 'fabiana.melo@email.com');
-insert into pessoa (nome, cpf, email) values ('Gustavo Henrique Dias', '98765432102', 'gustavo.dias@email.com');
-insert into pessoa (nome, cpf, email) values ('Helena Ribeiro Castro', '98765432103', 'helena.castro@email.com');
-insert into pessoa (nome, cpf, email) values ('Igor Carvalho Nunes', '98765432104', 'igor.nunes@email.com');
-insert into pessoa (nome, cpf, email) values ('Juliana Mendes Araujo', '98765432105', 'juliana.mendes@email.com');
+insert into pessoa (nome, cpf, email, version) values ('Ana Clara Souza', '12345678901', 'ana.clara@email.com');
+insert into pessoa (nome, cpf, email, version) values ('Bruno Martins Lima', '12345678902', 'bruno.martins@email.com');
+insert into pessoa (nome, cpf, email, version) values ('Carla Fernanda Alves', '12345678903', 'carla.alves@email.com');
+insert into pessoa (nome, cpf, email, version) values ('Diego Pereira Rocha', '12345678904', 'diego.rocha@email.com');
+insert into pessoa (nome, cpf, email, version) values ('Elisa Gomes Santos', '12345678905', 'elisa.santos@email.com');
+insert into pessoa (nome, cpf, email, version) values ('Fabiana Costa Melo', '98765432101', 'fabiana.melo@email.com');
+insert into pessoa (nome, cpf, email, version) values ('Gustavo Henrique Dias', '98765432102', 'gustavo.dias@email.com');
+insert into pessoa (nome, cpf, email, version) values ('Helena Ribeiro Castro', '98765432103', 'helena.castro@email.com');
+insert into pessoa (nome, cpf, email, version) values ('Igor Carvalho Nunes', '98765432104', 'igor.nunes@email.com');
+insert into pessoa (nome, cpf, email, version) values ('Juliana Mendes Araujo', '98765432105', 'juliana.mendes@email.com');
 
 insert into paciente (id, telefone, endereco) values (1, '63991234567', 'Rua das Palmeiras, 120');
 insert into paciente (id, telefone, endereco) values (2, '63992345678', 'Avenida Tocantins, 450');

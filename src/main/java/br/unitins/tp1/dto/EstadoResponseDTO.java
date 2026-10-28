@@ -4,7 +4,8 @@ import br.unitins.tp1.model.Estado;
 import br.unitins.tp1.model.Regiao;
 
 public record EstadoResponseDTO(
-    Long id, 
+    Long id,
+    long version, 
     String nome, 
     String sigla, 
     Regiao regiao
@@ -13,6 +14,7 @@ public record EstadoResponseDTO(
     public static EstadoResponseDTO fromEntity(Estado estado) {
         return new EstadoResponseDTO(
             estado.getId(),
+            estado.getVersion(),
             estado.getNome(),
             estado.getSigla(),
             estado.getRegiao()
